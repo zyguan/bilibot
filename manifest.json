@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "bilibot",
+  "description": "",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs",
+    "http://live.bilibili.com/*"
+  ],
+
+  "web_accessible_resources": ["ocrad.js", "bot.js"],
+
+  "content_scripts": [
+    {
+      "matches": ["http://live.bilibili.com/*"],
+      "js": ["inject_bot.js"]
+    }
+  ]
+}
